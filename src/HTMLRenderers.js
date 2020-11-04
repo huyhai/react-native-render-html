@@ -69,6 +69,7 @@ export function img (htmlAttribs, children, convertedCSSStyles, { key, ...passP
           height={height}
           style={style}
           key={key}
+          passProps2={passProps}
           {...getImgProps(passProps)}
         />
     );

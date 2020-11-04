@@ -97,7 +97,7 @@ export default class HTMLImage extends PureComponent {
                 this.mounted && this.setState({ width: optimalWidth, height: optimalHeight, error: false });
             },
             () => {
-                this.mounted && this.setState({ error: true });
+                this.mounted && this.setState({ error: true});
             }
         );
     }

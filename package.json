@@ -25,7 +25,8 @@
     "events": "^1.1.0",
     "html-entities": "^1.2.0",
     "htmlparser2": "3.10.1",
-    "react-native-lightbox": "0.8.1"
+    "react-native-lightbox": "0.8.1",
+     "react-native-image-pan-zoom": "2.1.12"
   },
   "peerDependencies": {
     "prop-types": ">=15.5.10",

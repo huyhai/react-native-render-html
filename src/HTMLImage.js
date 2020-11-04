@@ -104,7 +104,7 @@ export default class HTMLImage extends PureComponent {
 
     validImage (source, style, props = {}, onPressImg) {
         return (
-            <TouchableOpacity onPress={() => onPressImg(source)}>
+            <TouchableOpacity activeOpacity={1} onPress={() => onPressImg(source)}>
               <Image
                   source={source}
                   style={[style, { width: this.state.width, height: this.state.height, resizeMode: 'cover' }]}

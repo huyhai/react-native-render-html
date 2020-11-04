@@ -102,13 +102,16 @@ export default class HTMLImage extends PureComponent {
         );
     }
 
-    validImage (source, style, props = {}) {
+    validImage (source, style, props = {}, onPressImg) {
         return (
-            <Image
-              source={source}
-              style={[style, { width: this.state.width, height: this.state.height, resizeMode: 'cover' }]}
-              {...props}
-            />
+            <TouchableOpacity onPress={() => onPressImg(source)}>
+              <Image
+                  source={source}
+                  style={[style, { width: this.state.width, height: this.state.height, resizeMode: 'cover' }]}
+                  {...props}
+                />
+            </TouchableOpacity>
+          
         );
     }
 
@@ -121,8 +124,8 @@ export default class HTMLImage extends PureComponent {
     }
 
     render () {
-        const { source, style, passProps } = this.props;
-
-        return !this.state.error ? this.validImage(source, style, passProps) : this.errorImage;
+        const { source, style, passProps, passProps2 } = this.props;
+        const { onPressImg } = passProps2;
+        return !this.state.error ? this.validImage(source, style, passProps, onPressImg) : this.errorImage;
     }
 }
